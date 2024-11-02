@@ -1,721 +1,883 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
+<!doctype html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>进山中学·模拟政治协商社团</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
-  <!-- Fonts 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  -->
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/music.css">
-  
-  <!--其他标志库-->
-  <link href="https://cdn.bootcss.com/font-awesome/6.6.0/css/all.css" rel="stylesheet">
+/* open-sans-regular - latin-ext_latin */
+
+/* open-sans-italic - latin-ext_latin */
+
+/* open-sans-700 - latin-ext_latin */
+
+/* open-sans-700italic - latin-ext_latin */
+
+:root {
+    --title-color: #8064a9;
+    --text-color: #444444;
+    --light-text-color: #666666;
+    --lighter-text-color: #888888;
+    --link-color: #2aa899;
+    --code-color: #745fb5;
+    --shadow-color: #eee;
+    --border-quote: rgba(116, 95, 181, 0.2);
+    --border-quote-grey: #c8c8c8;
+    --border: #e7e7e7;
+    --link-bottom: #bbb;
+    --shadow: 3px 3px 10px var(--shadow-color);
+    --inline-code-bg: #f4f2f9;
+    --header-weight: normal;
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: var(var(--light-text-color));
+    --active-file-text-color: var(--title-color);
+    --active-file-bg-color: var(--shadow-color);
+    --item-hover-bg-color: var(--shadow-color);
+    --active-file-border-color: var(var(--title-color));
+    --base-font: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --title-font: "EB Garamond", "Source Sans Pro", serif;
+    --monospace: Courier, Monospace !important;
+}
+
+
+/* 打印 */
+
+@media print {
+    html {
+        font-size: 0.9rem;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+    #write {
+        max-width: 100%;
+    }
+    @page {
+        size: A3;
+        /* PDF output size */
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: initial;
+}
+
+body {
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    letter-spacing: 0;
+    overflow-x: hidden;
+}
+
+
+/* 页边距 和 页面大小 */
+
+#write {
+    font-family: var(--base-font);
+    /* max-width: 914px; */
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    padding-bottom: 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: 0.05rem;
+}
+
+body>*:first-child {
+    margin-top: 0 !important;
+}
+
+body>*:last-child {
+    margin-bottom: 0 !important;
+}
+
+
+/* Link 链接 */
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+#write a {
+    border-bottom: 1px solid var(--link-bottom);
+}
+
+.md-content {
+    color: var(--light-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: var(--header-weight);
+    line-height: 1.3;
+    cursor: text;
+    color: var(--title-color);
+    font-family: var(--title-font);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+h1:after {
+    content: "";
+    display: block;
+    margin: 0.2rem auto 0;
+    width: 6rem;
+    height: 2px;
+    border-bottom: 2px solid var(--title-color);
+}
+
+h2 {
+    padding-left: 0.4em;
+    border-left: 0.4em solid var(--title-color);
+    border-bottom: 1px solid var(--title-color);
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+
+/* horizontal rule */
+
+hr {
+    margin: 1.5em auto;
+    border-top: 1px solid var(--border);
+}
+
+
+/* 列表 */
+
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 2rem;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+#write ol li,
+ul li {
+    padding-left: 0.1rem;
+}
+
+
+/* 引用 */
+
+blockquote {
+    border-left: 0.3rem solid var(--border-quote);
+    padding-left: 1em;
+    font-family: var(--base-font);
+}
+
+
+/* 表格 */
+
+table {
+    margin-bottom: 1.25rem;
+}
+
+table th,
+table td {
+    padding: 8px;
+    line-height: 1.25rem;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table thead th {
+    vertical-align: middle;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fcfcfc;
+}
+
+
+/* 粗体 */
+
+#write strong {
+    padding: 0 2px;
+    font-weight: bold;
+}
+
+
+/* inline code */
+code,
+tt {
+    padding: 2px 4px;
+    border-radius: 0.3rem;
+    font-family: var(--monospace);
+    font-size: 0.9rem;
+    color: var(--code-color);
+    background-color: var(--inline-code-bg);
+    margin: 0 2px;
+}
+
+#write .md-footnote {
+    color: var(--code-color);
+    background-color: var(--inline-code-bg);
+}
+
+
+/* highlight. */
+
+#write mark {
+    background: rgb(255, 255, 196);
+    color: var(--text-color);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+    bottom: 0.375rem;
+}
+
+
+/* 图片 */
+
+.md-image>.md-meta {
+    border-radius: 3px;
+    font-family: var(--monospace);
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+
+/* 图片靠左显示 */
+
+
+/* p .md-image:only-child {
+  width: auto;
+  text-align: left;
+  margin-left: 2rem;
+} */
+
+
+/* 写![shadow-...]() 显示图片阴影 */
+
+img[alt|="shadow"] {
+    box-shadow: var(--shadow);
+}
+
+
+/* TOC */
+
+#write a.md-toc-inner {
+    line-height: 1.6;
+    white-space: pre-line;
+    border-bottom: none;
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+}
+
+.md-toc-h1 .md-toc-inner {
+    margin-left: 0;
+    font-weight: normal;
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: var(--base-font);
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #e6f0fe;
+}
+
+
+/* Code fences */
+
+
+/* border, bg, font */
+
+.md-fences {
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: #fdfdfd !important;
+    font-size: 0.9rem;
+}
+
+
+/* 代码框阴影 */
+
+
+/* #write pre.md-fences {
+  display: block;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: var(--shadow);
+} */
+
+.cm-s-inner .cm-variable {
+    color: var(--text-color);
+}
+
+.cm-s-inner {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.cm-s-inner.CodeMirror,
+.cm-s-inner .CodeMirror-gutters {
+    color: #3a3432 !important;
+    border: none;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    color: #6d8a88;
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    padding: 0 0.1rem 0 0.3rem;
+    color: #b8b5b4;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: #a34e8f !important;
+}
+
+#fences-auto-suggest .active {
+    background: #ddd;
+}
+
+.cm-s-inner span.cm-comment {
+    color: #9daab6;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #0451a5;
+}
+
+
+/* language tip */
+
+#write .code-tooltip {
+    border: 1px solid var(--border);
+}
+
+.auto-suggest-container {
+    border-color: #b4b4b4;
+}
+
+.auto-suggest-container .autoComplt-hint.active {
+    background: #b4b4b4;
+    color: inherit;
+}
+
+
+/* task list */
+
+#write .md-task-list-item>input {
+    -webkit-appearance: initial;
+    display: block;
+    position: absolute;
+    border: 1px solid #b4b4b4;
+    border-radius: 0.2rem;
+    margin-top: 0.3rem;
+    height: 1rem;
+    width: 1rem;
+    transition: background 0.3s;
+}
+
+#write .md-task-list-item>input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#write .md-task-list-item>input:hover {
+    background: #ddd;
+}
+
+#write .md-task-list-item>input[checked]::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 60%;
+    width: 2px;
+    transform: rotate(40deg);
+    background: #333;
+}
+
+#write .md-task-list-item>input[checked]::after {
+    content: "";
+    position: absolute;
+    top: 46%;
+    left: 25%;
+    height: 30%;
+    width: 2px;
+    transform: rotate(-40deg);
+    background: #333;
+}
+
+#write .md-task-list-item>p {
+    transition: color 0.3s, opacity 0.3s;
+}
+
+#write .md-task-list-item.task-list-done>p {
+    color: #b4b4b4;
+    text-decoration: line-through;
+}
+
+#write .md-task-list-item.task-list-done>p>.md-emoji {
+    opacity: 0.5;
+}
+
+#write .md-task-list-item.task-list-done>p>.md-link>a {
+    opacity: 0.6;
+}
+
+
+/* sidebar */
+
+#typora-sidebar,
+.typora-node #typora-sidebar {
+    box-shadow: 3px 0px 10px var(--shadow-color);
+}
+
+.sidebar-content-content {
+    font-size: 0.9rem;
+}
+
+/* 使图片宽度随屏幕大小自动调整 */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    position: absolute; /* 绝对定位 */
+    right: 0;           /* 靠右对齐 */
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    right: 0;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    right: 0;
+}
+
+/* 特小屏幕 - 窄而短的屏幕 (宽度小于 400px，高度小于 700px) */
+@media (max-width: 400px) and (max-height: 700px) {
+    .responsive-img {
+        width: 32%; 
+        top: 138%;             
+        transform: translateY(-138%);
+    }
+}
+
+/* 特小屏幕 - 窄而长的屏幕 (宽度小于 400px，高度大于等于 700px) */
+@media (max-width: 400px) and (min-height: 700px) {
+    .responsive-img {
+        width: 32%; 
+        top: 140%;             
+        transform: translateY(-140%);
+    }
+}
+
+/* 小屏幕 - 宽而短的屏幕 (宽度 401px 到 600px，高度小于 800px) */
+@media (min-width: 401px) and (max-width: 600px) and (max-height: 800px) {
+    .responsive-img {
+        width: 27%; 
+        top: 143%;             
+        transform: translateY(-143%);
+    }
+}
+
+/* 小屏幕 - 宽而长的屏幕 (宽度 401px 到 600px，高度大于等于 800px) */
+@media (min-width: 401px) and (max-width: 600px) and (min-height: 800px) {
+    .responsive-img {
+        width: 26%; 
+        top: 140%;             
+        transform: translateY(-140%);
+    }
+}
+
+/* 中等屏幕 - 宽而短的屏幕 (宽度 601px 到 1024px，高度小于 900px) */
+@media (min-width: 601px) and (max-width: 1024px) and (max-height: 900px) {
+    .responsive-img {
+        width: 25%;
+        top: 75%;              
+        transform: translateY(-75%);
+    }
+}
+
+/* 中等屏幕 - 宽而长的屏幕 (宽度 601px 到 1024px，高度大于等于 900px) */
+@media (min-width: 601px) and (max-width: 1024px) and (min-height: 900px) {
+    .responsive-img {
+        width: 20%;
+        top: 100%;              
+        transform: translateY(-100%);
+    }
+}
+
+/* 大屏幕 - 宽而短的屏幕 (宽度 1025px 到 1440px，高度小于 1000px) */
+@media (min-width: 1025px) and (max-width: 1440px) and (max-height: 1000px) {
+    .responsive-img {
+        width: 15%;
+        top: 100%;              
+        transform: translateY(-100%);
+    }
+}
+
+/* 大屏幕 - 宽而长的屏幕 (宽度 1025px 到 1440px，高度大于等于 1000px) */
+@media (min-width: 1025px) and (max-width: 1440px) and (min-height: 1000px) {
+    .responsive-img {
+        width: 15%;
+        top: 100%;              
+        transform: translateY(-100%);
+    }
+}
+
+/* 特大屏幕 - 宽而长的屏幕 (宽度大于 1440px，高度大于 1200px) */
+@media (min-width: 1441px) and (min-height: 1200px) {
+    .responsive-img {
+        width: 12%;
+        top: 100%;              
+        transform: translateY(-100%);
+    }
+}
+
+/* 特大屏幕 - 宽而短的屏幕 (宽度大于 1440px，高度小于 1200px) */
+@media (min-width: 1441px) and (max-height: 1200px) {
+    .responsive-img {
+        width: 12%;
+        top: 100%;              
+        transform: translateY(-100%);
+    }
+}
+
+
+
+
+</style><title>模拟政治协商社团WIKI</title>
 </head>
-
-<body class="index-page">
-
-  <!-- 音乐播放器控件 -->
-  <div id="music-controller">
-    <span id="mini-icon">🎵</span>
-    <button id="toggle-button">×</button>
-    <h3 id="status-text">🎶 正在播放音乐</h3>
-    <audio id="audio" src="assets/music/a.mp3" loop></audio>
-    <div id="controls">
-        <button id="play-pause">▶️</button>
-        <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="0.5">
-    </div>
-  </div>
-
-  <header id="header" class="header fixed-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:3520645758@qq.com">3520645758@qq.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+86 18335126202</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="./Other/QRcode/qq.html" class="qq" target="_blank"><i class="bi bi-tencent-qq"></i></a>
-          <a href="./Other/QRcode/wechat.html" class="wechat" target="_blank"><i class="bi bi-chat-dots"></i></a>
-          <a href="https://revival-society.github.io/JZMZS_WIKI.github.io/" class="wiki" target="_blank"><i class="bi bi-wikipedia"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
-    <div class="branding d-flex align-items-center">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">模拟政治协商</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">主页</a></li>
-            <li><a href="#about">简介</a></li>
-            <li><a href="#services">具体了解</a></li>
-            <li><a href="#portfolio">展示</a></li>
-            <li><a href="#team">上朝</a></li>
-            <!--<li class="dropdown"><a href="#"><span>其他</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>-->
-            <li><a href="#contact">加入我们</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-
-    </div>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-start">
-          <div class="col-lg-8">
-            <h2>★欢迎来到模拟政治协商社团★</h2>
-            <p>坚持党的领导🚩永远跟党走🔺社团不是🙅脱缰的野马🐎</p>
-            <a href="#contact" class="btn-get-started">加入我们</a>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Deep dark hole<br></span>
-        <h2>深入♂了解<br></h2>
-        <p>社团致力于成员间的蕉流与合作，共同探讨各种议题🗡。</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          
-          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>天啊！那是相似的！</h3>
-            <p class="fst-italic">
-              专业的！正规的！有趣的！
-            </p>
-            <ul>
-              <li><i class="bi bi-stars"></i> <span>👍自由 平等 文明 和谐👍</span></li>
-              <li><i class="bi bi-stars"></i> <span>🤵真正的模拟！🤵</span></li>
-              <li><i class="bi bi-stars"></i> <span>🤵‍♀️真正的协商！🤵‍♀️</span></li>
-            </ul>
-            <a href="#contact" class="read-more"><span>点击参加！</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Cards Section -->
-    <section id="cards" class="cards section">
-
-      <div class="container">
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="100">
-            <span>01</span>
-            <h4>报名社团吧</h4>
-            <p>只要你的成分正确就可以加入咧！</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="200">
-            <span>02</span>
-            <h4>创建组别吧</h4>
-            <p>创建你的组别，表明你的组立场，拉拢你的组员！</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="300">
-            <span>03</span>
-            <h4> 丰富组别吧</h4>
-            <p>你需要设计师来设计你的组徽，组旗，虚拟形象等等！</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
-            <span>04</span>
-            <h4>筹备议题吧</h4>
-            <p>投降？投降！投降？！</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
-            <span>05</span>
-            <h4>尽情表演吧</h4>
-            <p>炸弹！反转卡！</p>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="600">
-            <span>06</span>
-            <h4>征服大海吧！</h4>
-            <p>俺は海贼王になる男だ！</p>
-          </div><!-- End Card Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Cards Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
-
-      <div class="container">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div> 
-            <!--<div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>-->
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <!--<div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>-->
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>进入阿兹卡班</span>
-        <h2>KNOW MORE🤯</h2>
-        <p>有关于社团的更多信息！！</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-wikipedia"></i>
-              </div>
-              <a href="https://revival-society.github.io/JZMZS_WIKI.github.io/" target="_blank" class="stretched-link">
-                <h3>WIKI</h3>
-              </a>
-              <p>社团的发展、活动、插图等等.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <!--<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Eosle Commodi</h3>
-              </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-            </div>
-          </div>--><!-- End Service Item -->
-
-          <!--<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Ledo Markt</h3>
-              </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-            </div>
-          </div>--><!-- End Service Item -->
-
-          <!--<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Asperiores Commodit</h3>
-              </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>--><!-- End Service Item -->
-
-          <!--<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Velit Doloremque</h3>
-              </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>--><!-- End Service Item -->
-
-          <!--<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Dolori Architecto</h3>
-              </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>--><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/cta-bg.jpg" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>💞别等了💞</h3>
-              <p>你究竟在等什么！百利而无一害！快来啊！！！</p>
-              <a class="cta-btn" href="#contact">点击上船</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Call To Action Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>卢浮宫</span>
-        <h2>图片展示</h2>
-        <p>豪堪！👍</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">全部</li>
-            <li data-filter=".filter-club">社团</li>
-            <li data-filter=".filter-team">小组</li>
-            <li data-filter=".filter-event">活动展示</li>
-            <li data-filter=".filter-school">学校</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-club">
-              <img src="assets/img/exhibition/Club/logo/Club-logo.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>社团标志</h4>
-                <p>Heaven-Studio创建</p>
-                <a href="assets/img/exhibition/Club/logo/Club-logo.png" title="社团标志" data-gallery="portfolio-gallery-club" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-school">
-              <img src="assets/img/exhibition/School/logo.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>校徽</h4>
-                <!--<p></p>-->
-                <a href="assets/img/exhibition/School/logo.png" title="校徽" data-gallery="portfolio-gallery-school" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-team">
-              <img src="assets/img/exhibition/Team/RS/logo/RS-Logo1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>RSのlogo1</h4>
-                <!--<p></p>-->
-                <a href="assets/img/exhibition/Team/RS/logo/RS-Logo1.jpg" title="RSのlogo1" data-gallery="portfolio-gallery-team" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-team">
-              <img src="assets/img/exhibition/Team/RS/logo/RS-Logo2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>RSのlogo2</h4>
-                <!--<p></p>-->
-                <a href="assets/img/exhibition/Team/RS/logo/RS-Logo2.jpg" title="RSのlogo2" data-gallery="portfolio-gallery-team" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-team">
-              <img src="assets/img/exhibition/Team/RS/logo/RS-Logo3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>RSのlogo3</h4>
-                <!--<p></p>-->
-                <a href="assets/img/exhibition/Team/RS/logo/RS-Logo3.jpg" title="RSのlogo3" data-gallery="portfolio-gallery-team" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-team">
-              <img src="assets/img/exhibition/Team/Tang/logo/tang.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>唐·国旗</h4>
-                <!--<p></p>-->
-                <a href="assets/img/exhibition/Team/Tang/logo/tang.jpg" title="唐·国旗" data-gallery="portfolio-gallery-team" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--<a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>-->
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!---
-  
-    <section id="pricing" class="pricing section">
-
-   
-      <div class="container section-title" data-aos="fade-up">
-        <span>Pricing</span>
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-
-      <div class="container">
-
-        <div class="row g-4 g-lg-0">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 featured" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>-->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>朝廷</span>
-        <h2>创始人</h2>
-        <p>皇帝与左右丞相</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>唐人一号</h4>
-                <span>社长</span>
-                <p>
-                  没什么好介绍的
-                </p>
-                <div class="social">
-                  <!--预留-->
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>nFr3axp1</h4>
-                <span>社团的皇帝</span>
-                <p>
-                  真正的社长、副社长、宣传长、策划长、举办长、网页开发者
-                </p>
-                <div class="social">
-                  <a href="./Other/QRcode/qq.html" target="_blank"><i class="bi bi-tencent-qq"></i></a>
-                  <a href="https://x.com/nFr3axp1" target="_blank"><i class="bi bi-twitter-x"></i></a>            
-                  <a href="./Other/QRcode/wechat.html" target="_blank"><i class="fab fa-weixin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>唐人二号</h4>
-                <span>副社长</span>
-                <p>
-                  没什么好介绍的
-                </p>
-                <div class="social">
-                  <!--预留-->
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>上船！</span>
-        <h2>📞联系我们📞</h2>
-        <p>🤵无数种方式让你找到我们🤵‍♀️</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-microsoft-teams"></i>
-              <h3>联系创始人</h3>
-              <a href="#team">点击跳转</a>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone-fill"></i>
-              <h3>电话</h3>
-              <p>+86 18335126202</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope-fill"></i>
-              <h3>邮箱</h3>
-              <p>3520645758@qq.com</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-          <div class="col-lg-4 col-md-6">
-              <div class="footer-about">
-                  <a href="index.html" class="logo sitename">模拟政治协商社团</a>
-                  <div class="footer-contact pt-3">
-                      <p>Produced by Heaven-Studio</p>
-                      <p>nFra3xp1</p>
-                      <p class="mt-3"><strong>电话:</strong> <span>+86 18335126202</span></p>
-                      <p><strong>Email:</strong> <span>3520645758@qq.com</span></p>
-                  </div>
-                  <div class="social-links d-flex mt-4">
-                      <a href="https://x.com/nFr3axp1" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                      <a href="https://t.me/+vxE4EpgB-IMyZThl" target="_blank"><i class="bi bi-telegram"></i></a>
-                      <a href="https://www.facebook.com/profile.php?id=61555907681366" target="_blank"><i class="bi bi-facebook"></i></a>
-                      <a href="https://www.instagram.com/tianyeorg_?igsh=d3Ywb2JoM2tyazFj" target="_blank"><i class="bi bi-instagram"></i></a>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="col-lg-4 col-md-6" style="margin-left: auto;"> <!-- 使用 margin-left: auto; -->
-              <div class="footer-about">
-                  <img src="assets/img/End-bg.png" class="img-fluid" alt="">
-              </div>
-          </div>
-      </div>
-    </div>
-  
-  
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Revival-Society&Heaven-Studio</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Produced by <a href="#hero">Heaven-Studio</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <!--其他js-->
-  <script src="assets/js/music.js"></script>
-  <script src="assets/js/ClickEffects.js"></script>、
-  <script src="assets/js/DraggedEffects.js"></script>
-  <script src="assets/js/Snow.js"></script>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n3"><a class="md-toc-inner" href="#模拟政治协商社团wiki">模拟政治协商社团WIKI</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" href="#发展历史">发展历史</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n6"><a class="md-toc-inner" href="#社团小组介绍">社团小组介绍</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8"><a class="md-toc-inner" href="#社团活动介绍">社团活动介绍</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#社团结构">社团结构</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n12"><a class="md-toc-inner" href="#制作组">制作组：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n89"><a class="md-toc-inner" href="#heaven-studio">Heaven-Studio</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n13"><a class="md-toc-inner" href="#注有什么要加的和我说">注：有什么要加的和我说!</a></span></p></div><link rel="stylesheet" href="./purple.css"><h1 id='模拟政治协商社团wiki'><span>模拟政治协商社团WIKI</span></h1><h2 id='发展历史'><span>发展历史</span></h2><p><span>宇宙大爆炸时期创建</span></p><h2 id='社团小组介绍'><span>社团小组介绍</span></h2><p><span>目前没有</span></p><h2 id='社团活动介绍'><span>社团活动介绍</span></h2><p><span>尚不清楚</span></p><h2 id='社团结构'><span>社团结构</span></h2><p><span>不知道</span></p><h3 id='制作组'><span>制作组：</span></h3><h3 id='heaven-studio'><span>Heaven-Studio</span></h3><h3 id='注有什么要加的和我说'><span>注：有什么要加的和我说!</span></h3><p><img src="./img/普奇神父.png" alt="图片描述" class="responsive-img"></p></div></div>
 </body>
-
 </html>
